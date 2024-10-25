@@ -1,0 +1,103 @@
+design As screen:
+    BackgroundImage: ='img-background2'
+    Fill: =RGBA(39, 113, 194, 1)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: |
+        =1666
+
+    btnComeceAgora_2 As button:
+        BorderColor: =
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =
+        HoverColor: =ColorFade(Self.Color,25%)
+        HoverFill: =ColorFade(Self.Color,90%)
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(Self.Color,70%)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =12
+        Text: ="Comece agora!"
+        Width: =170
+        X: =1245
+        Y: =696
+        ZIndex: =1
+
+    btnComeceAgora_3 As button:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =
+        HoverColor: =ColorFade(Self.Color,25%)
+        HoverFill: =ColorFade(Self.Color,90%)
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(Self.Color,70%)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =12
+        Text: ="Login"
+        Width: =170
+        X: =1435
+        Y: =696
+        ZIndex: =2
+
+    btnCadastrarUsuario_1 As button:
+        BorderColor: =
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(18, 11, 122, 1)
+        FocusedBorderColor: =
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =
+        HoverFill: =ColorFade(Self.Fill,8%)
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(Self.Fill,18%)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =12
+        Text: ="Cadastrar"
+        Width: =170
+        X: =1276
+        Y: =616
+        ZIndex: =3
+

@@ -1,0 +1,18 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =Set(gblCorCinza,ColorValue("#dedede"));
+        Set(gblCorPretoAzul,RGBA(8, 10, 32, 1)); //tom escuro com opacidade total
+        Set(gblCorAzulMarinhoEscuro,RGBA(10, 16, 64, 1)); //azul marinho escuro com opacidade total.
+        Set(gblCorAzulMedioEscuro,RGBA(27, 30, 105, 1)); //azul médio escuro com opacidade total.
+        Set(gblCorAzulVibrante,RGBA(41, 55, 186, 1)); //azul vibrante com opacidade total.
+        Set(gblCorAzulClaroVibrante,RGBA(70, 100, 233, 1)) //azul claro e brilhante com opacidade total.
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

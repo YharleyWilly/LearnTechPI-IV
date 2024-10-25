@@ -1,0 +1,1055 @@
+"'Tela Cadastro' As screen":
+    BackgroundImage: ='img-background2'
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =NewForm(frmCadastroUsuario)
+    Width: =1666
+
+    ctnHeader_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =110
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1666
+        ZIndex: =1
+
+        icoMenu_1 As icon.Waffle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =50
+            Icon: =Icon.Waffle
+            Visible: =false
+            Width: =50
+            X: =1560
+            Y: =30
+            ZIndex: =1
+
+        lblNomeApp_1 As Texto:
+            AutoHeight: =false
+            DisplayMode: =DisplayMode.Edit
+            Font: =Font.'Segoe UI'
+            FontColor: =RGBA(255, 255, 255, 1)
+            FontItalic: =false
+            FontUnderline: =false
+            Height: =40
+            Size: =25
+            Text: ="Learn Tech"
+            Weight: ='TextCanvas.Weight'.Regular
+            Width: =160
+            X: =82
+            Y: =34
+            ZIndex: =2
+
+    ctnBody_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =658
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1666
+        Y: =110
+        ZIndex: =2
+
+        lblTituloBody_1 As Texto:
+            Align: ='TextCanvas.Align'.Center
+            AutoHeight: =false
+            DisplayMode: =DisplayMode.Edit
+            Font: =Font.'Courier New'
+            FontColor: =RGBA(255, 255, 255, 1)
+            FontItalic: =false
+            FontUnderline: =false
+            Height: =160
+            Size: =50
+            Text: ="Descubra seu caminho na tecnologia com nosso guia inteligente!"
+            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+            Visible: =false
+            Weight: ='TextCanvas.Weight'.Medium
+            Width: =1039
+            X: =314
+            Y: =80
+            ZIndex: =3
+
+        lblSubTituloBody_1 As Texto:
+            Align: ='TextCanvas.Align'.Center
+            AutoHeight: =false
+            DisplayMode: =DisplayMode.Edit
+            Font: =Font.'Segoe UI'
+            FontColor: =RGBA(181, 181, 181, 1)
+            FontItalic: =false
+            FontUnderline: =false
+            Height: =51
+            Size: =16
+            Text: ="Comece agora mesmo a guiar o seu conhecimento para um futuro dev"
+            Visible: =false
+            Weight: ='TextCanvas.Weight'.Regular
+            Width: =1039
+            X: =314
+            Y: =240
+            ZIndex: =4
+
+    ctnPopUp As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(106, 122, 127, 0.25)
+        Height: =768
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1666
+        ZIndex: =3
+
+        ctnFrmCadastroUsuario As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =614
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =859
+            X: =432
+            Y: =108
+            ZIndex: =3
+
+            btnCadastrarUsuario As button:
+                BorderColor: =
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(18, 11, 122, 1)
+                FocusedBorderColor: =
+                FocusedBorderThickness: =1
+                Font: =Font.'Segoe UI'
+                HoverBorderColor: =
+                HoverFill: =ColorFade(Self.Fill,8%)
+                OnSelect: |-
+                    =If(
+                        DataCardValue2.Value = Blank() ||
+                        DataCardValue3.Value = Blank() ||
+                        DataCardValue4.Selected.Value = Blank() ||
+                        DataCardValue6.Selected.Value = Blank() ||
+                        DataCardValue8.Selected.Value = Blank() ||
+                        DataCardValue7.Value = Blank() ||
+                        rdoDisponibilidadeInvesstimento.Selected.Value = Blank() ||
+                        DataCardValue10.Selected.Value = Blank() ||
+                        DataCardValue1.Selected.Value = Blank() ||
+                        DataCardValue5.Selected.Value = Blank() 
+                        ,
+                        Notify("É necessário preencher todos os campos para seguir com o guia!",NotificationType.Information,3000)
+                        ,
+                    
+                        UpdateContext({locNome:DataCardValue2.Value});
+                        UpdateContext({locIdade:DataCardValue3.Value});
+                        UpdateContext({locObjetivoEducacional:DataCardValue4.Selected.Value});
+                        UpdateContext({locTempoEstudos:DataCardValue6.Selected.Value});
+                        UpdateContext({locExperiencia:DataCardValue8.Selected.Value});
+                        UpdateContext({locDuracaoEsperada:DataCardValue7.Value});
+                        UpdateContext({locDisponibilidade:rdoDisponibilidadeInvesstimento.Selected.Value});
+                        UpdateContext({locMetodologiaAprendizado:DataCardValue10.Selected.Value});
+                        UpdateContext({locAreaInteresse:DataCardValue1.Selected.Value});
+                        UpdateContext({locEspecializacao:DataCardValue5.Selected.Value});
+                    
+                    UpdateContext({PopUpConfirmarCadastro:true}))
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(Self.Fill,18%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =12
+                Text: ="Cadastrar"
+                Width: =170
+                X: =345
+                Y: =534
+                ZIndex: =1
+
+            frmCadastroUsuario As form.PowerApps_CoreControls_Form:
+                AcceptsFocus: =false
+                BorderColor: =App.Theme.Colors.Darker40
+                DataSource: =lst_Usuarios_LearnTech
+                Height: =463
+                OnSuccess: |-
+                    =Set(gblOutputOpenai,'[Fluxo]Gpt-3Openai'.Run(locNome,locIdade,locObjetivoEducacional,locAreaInteresse,locTempoEstudos,locDuracaoEsperada,locExperiencia,locDisponibilidade,locMetodologiaAprendizado,locEspecializacao));
+                    
+                    
+                    UpdateContext({nome:Blank()});
+                    UpdateContext({idade:Blank()});
+                    UpdateContext({objetivoEducacional:Blank()});
+                    UpdateContext({tempoEstudos:Blank()});
+                    UpdateContext({experiencia:Blank()});
+                    UpdateContext({duracaoEsperada:Blank()});
+                    UpdateContext({disponibilidade:Blank()});
+                    UpdateContext({metodologiaAprendizado:Blank()});
+                    UpdateContext({areaInteresse:Blank()});
+                    UpdateContext({especializacao:Blank()});
+                    
+                    UpdateContext({PopUpConfirmarCadastro:false});
+                    
+                    Navigate('Tela Resultado',ScreenTransition.Fade)
+                UseFluentV9Cards: =true
+                Width: =810
+                X: =25
+                Y: =76
+                ZIndex: =2
+
+                Area_Interesse_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Area_Interesse"
+                    Default: =ThisItem.Area_Interesse
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Area_Interesse)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =DataCardValue1.Selected
+                    Width: =400
+                    WidthFit: =true
+                    X: =0
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey1 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Área de Interesse"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue1 As 'Caixa de Combinação'.pcfdataset":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@lst_Usuarios_LearnTech].Area_Interesse)
+                        Required: =false
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage1 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue1.Y + DataCardValue1.Height
+                        ZIndex: =3
+
+                    StarVisible1 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey1.Y
+                        ZIndex: =4
+
+                Especializacao_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Especializacao"
+                    Default: =ThisItem.Especializacao
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Especializacao)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =DataCardValue5.Selected
+                    Width: =450
+                    WidthFit: =true
+                    X: =0
+                    Y: =2
+                    ZIndex: =1
+
+                    DataCardKey5 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue5 As 'Caixa de Combinação'.pcfdataset":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: |-
+                            =Switch(
+                                DataCardValue1.Selected.Value,
+                                "Desenvolvimento de Software",
+                                ["Desenvolvimento Web (Front-end/Back-end)", "Desenvolvimento de Aplicativos Móveis", "Desenvolvimento de Jogos","Engenharia de Software","Automação"],
+                            
+                                "Ciência de Dados",
+                                ["Análise de Dados", "Machine Learning", "Inteligência Artificial","Big Data","Visualização de Dados"],
+                            
+                                "Cibersegurança",
+                                ["Segurança da Informação", "Pentesting (Testes de Penetração)", "Gestão de Segurança","Segurança em Redes","Criptografia"],
+                            
+                                "Administração de Sistemas",
+                                ["DevOps", "Administração de Redes", "Arquitetura de Infraestrutura","Virtualização e Cloud Computing (AWS, Azure, Google Cloud)"],
+                            
+                                "Banco de Dados",
+                                ["Administração de Banco de Dados (DBA)", "Engenharia de Dados", "SQL e NoSQL","Data Warehousing"],
+                            
+                                "Inteligência Artificial e Robótica",
+                                ["Robótica", "Automação Inteligente", "Chatbots","Processamento de Linguagem Natural (NLP)"],
+                            
+                                "Design e Experiência do Usuário (UX/UI)",
+                                ["Design de Interfaces (UI)", "Experiência do Usuário (UX)", "Prototipagem e Wireframing","Design Responsivo"],
+                            
+                                "Internet das Coisas (IoT)",
+                                ["Dispositivos Conectados", "Redes de Sensores", "Automação Residencial/Industrial","Cidades Inteligentes"],
+                            
+                                "Computação em Nuvem",
+                                ["Arquitetura de Nuvem", "Serviços de Nuvem (AWS, Azure, Google Cloud)", "DevOps em Nuvem","Segurança em Nuvem"],
+                            
+                                "Realidade Aumentada e Realidade Virtual (AR/VR)",
+                                ["Desenvolvimento de Realidade Virtual", "Desenvolvimento de Realidade Aumentada", "Simulação 3D"]
+                            )
+                        Required: =false
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey5.Y + DataCardKey5.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage5 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue5.Y + DataCardValue5.Height
+                        ZIndex: =3
+
+                    StarVisible5 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey5.Y
+                        ZIndex: =4
+
+                Nome_Usuario_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Nome_Usuario"
+                    Default: =ThisItem.Nome_Usuario
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Nome_Usuario)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    MaxLength: =DataSourceInfo([@lst_Usuarios_LearnTech], DataSourceInfo.MaxLength, Nome_Usuario)
+                    Required: =true
+                    Update: =DataCardValue2.Value
+                    Width: =300
+                    WidthFit: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                    DataCardKey2 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: |-
+                            ="Nome Completo
+                            "
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue2 As 'Entrada de texto'":
+                        AccessibleLabel: =Parent.DisplayName
+                        Appearance: ='TextInputCanvas.Appearance'.FilledLighter
+                        BasePaletteColor: =
+                        BorderColor: =RGBA(222, 222, 222, 1)
+                        BorderRadius: =
+                        BorderThickness: =1
+                        DisplayMode: =Parent.DisplayMode
+                        FontColor: =
+                        FontStrikethrough: =false
+                        Height: =32
+                        Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                        Required: =Parent.Required
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage2 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue2.Y + DataCardValue2.Height
+                        ZIndex: =3
+
+                    StarVisible2 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey2.Y
+                        ZIndex: =4
+
+                Idade_DataCard1 As typedDataCard.fluentV9NumberEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Idade"
+                    Default: =ThisItem.Idade
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Idade)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =Value(DataCardValue3.Value)
+                    Width: =100
+                    WidthFit: =false
+                    X: =1
+                    Y: =0
+                    ZIndex: =3
+
+                    DataCardKey3 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: =Parent.DisplayName
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue3 As 'Entrada de texto'":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='TextInputCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey3.Y + DataCardKey3.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage3 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue3.Y + DataCardValue3.Height
+                        ZIndex: =3
+
+                    StarVisible3 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey3.Y
+                        ZIndex: =4
+
+                Objetivo_Educacional_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Objetivo_Educacional"
+                    Default: =ThisItem.Objetivo_Educacional
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Objetivo_Educacional)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =DataCardValue4.Selected
+                    Width: =410
+                    WidthFit: =false
+                    X: =1
+                    Y: =0
+                    ZIndex: =3
+
+                    DataCardKey4 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Objetivo Educacional"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue4 As 'Caixa de Combinação'.pcfdataset":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@lst_Usuarios_LearnTech].Objetivo_Educacional)
+                        Required: =false
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage4 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue4.Y + DataCardValue4.Height
+                        ZIndex: =3
+
+                    StarVisible4 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey4.Y
+                        ZIndex: =4
+
+                Disponibilidade_Investimento_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Disponibilidade_Investimento"
+                    Default: =ThisItem.Disponibilidade_Investimento
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Disponibilidade_Investimento)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =rdoDisponibilidadeInvesstimento.Selected
+                    Visible: =true
+                    Width: =400
+                    WidthFit: =false
+                    X: =2
+                    Y: =1
+                    ZIndex: =3
+
+                    DataCardKey9 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Disponiblidade Investimento"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue9 As 'Caixa de Combinação'.pcfdataset":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@lst_Usuarios_LearnTech].Disponibilidade_Investimento)
+                        Required: =false
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Visible: =false
+                        Width: =Parent.Width - 48
+                        X: =0
+                        Y: =41
+                        ZIndex: =2
+
+                    ErrorMessage9 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue9.Y + DataCardValue9.Height
+                        ZIndex: =3
+
+                    StarVisible9 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey9.Y
+                        ZIndex: =4
+
+                    "rdoDisponibilidadeInvesstimento As 'Botão de opção'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =37
+                        Items: =["Sim", "Não"]
+                        Layout: ='RadioGroupCanvas.Layout'.Horizontal
+                        Width: =352
+                        X: =24
+                        Y: =36
+                        ZIndex: =5
+
+                Experiencia_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Experiencia"
+                    Default: =ThisItem.Experiencia
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Experiencia)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =73
+                    Required: =true
+                    Update: =DataCardValue8.Selected
+                    Width: =400
+                    WidthFit: =false
+                    X: =0
+                    Y: =3
+                    ZIndex: =3
+
+                    DataCardKey8 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Experiência"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue8 As 'Caixa de Combinação'.pcfdataset":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@lst_Usuarios_LearnTech].Experiencia)
+                        Required: =false
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey8.Y + DataCardKey8.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage8 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue8.Y + DataCardValue8.Height
+                        ZIndex: =3
+
+                    StarVisible8 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey8.Y
+                        ZIndex: =4
+
+                Tempo_Estudos_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Tempo_Estudos"
+                    Default: =ThisItem.Tempo_Estudos
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Tempo_Estudos)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =DataCardValue6.Selected
+                    Width: =400
+                    X: =1
+                    Y: =3
+                    ZIndex: =3
+
+                    DataCardKey6 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Tempo Estudos em Horas"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue6 As 'Caixa de Combinação'.pcfdataset":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@lst_Usuarios_LearnTech].Tempo_Estudos)
+                        Required: =false
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =36
+                        ZIndex: =2
+
+                    ErrorMessage6 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue6.Y + DataCardValue6.Height
+                        ZIndex: =3
+
+                    StarVisible6 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey6.Y
+                        ZIndex: =4
+
+                Duracao_Esperada_DataCard1 As typedDataCard.fluentV9NumberEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Duracao_Esperada"
+                    Default: =ThisItem.Duracao_Esperada
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Duracao_Esperada)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =70
+                    Required: =true
+                    Update: =Value(DataCardValue7.Value)
+                    Width: =400
+                    WidthFit: =false
+                    X: =0
+                    Y: =4
+                    ZIndex: =3
+
+                    DataCardKey7 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Duração Esperada em Meses"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue7 As 'Entrada de texto'":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='TextInputCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Value: =Parent.Default
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =36
+                        ZIndex: =2
+
+                    ErrorMessage7 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue7.Y + DataCardValue7.Height
+                        ZIndex: =3
+
+                    StarVisible7 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey7.Y
+                        ZIndex: =4
+
+                Metodologia_Aprendizado_DataCard1 As typedDataCard.fluentV9ComboBoxMultiSelectEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Metodologia_Aprendizado"
+                    Default: =ThisItem.Metodologia_Aprendizado
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@lst_Usuarios_LearnTech],DataSourceInfo.DisplayName,Metodologia_Aprendizado)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =100
+                    Required: =true
+                    Update: =DataCardValue10.SelectedItems
+                    Width: =400
+                    WidthFit: =false
+                    X: =1
+                    Y: =4
+                    ZIndex: =3
+
+                    DataCardKey10 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =22
+                        Text: ="Metodologia Aprendizado"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - 48
+                        Wrap: =false
+                        X: =24
+                        Y: =10
+                        ZIndex: =1
+
+                    "DataCardValue10 As 'Caixa de Combinação'.pcfdataset":
+                        AccessibleLabel: =If(Parent.Required, Substitute("{0}. Obrigatório.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                        Appearance: ='ComboboxCanvas.Appearance'.FilledLighter
+                        BorderColor: =gblCorCinza
+                        BorderThickness: =1
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =32
+                        Items: =Choices([@lst_Usuarios_LearnTech].Metodologia_Aprendizado)
+                        Required: =false
+                        SelectMultiple: =false
+                        ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                        Width: =Parent.Width - 48
+                        X: =24
+                        Y: =DataCardKey10.Y + DataCardKey10.Height + 4
+                        ZIndex: =2
+
+                    ErrorMessage10 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =30
+                        Text: =Parent.Error
+                        Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =Parent.Width - 48
+                        Wrap: =true
+                        X: =24
+                        Y: =DataCardValue10.Y + DataCardValue10.Height
+                        ZIndex: =3
+
+                    StarVisible10 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =20
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        X: =0
+                        Y: =DataCardKey10.Y
+                        ZIndex: =4
+
+            lblInicio As Texto:
+                Align: ='TextCanvas.Align'.Center
+                AutoHeight: =false
+                DisplayMode: =DisplayMode.Edit
+                Font: =Font.'Segoe UI'
+                FontColor: =RGBA(0, 0, 0, 1)
+                FontItalic: =false
+                FontUnderline: =false
+                Height: =52
+                Size: =30
+                Text: ="Insira suas informações"
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =438
+                X: =211
+                Y: =16
+                ZIndex: =3
+
+        ctnConfirmarCadastro As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =614
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Visible: =PopUpConfirmarCadastro
+            Width: =1065
+            X: =301
+            Y: =108
+            ZIndex: =4
+
+            btnCancelarCadastro As button:
+                BorderColor: =RGBA(18, 11, 122, 1)
+                BorderThickness: =1
+                Color: =RGBA(18, 11, 122, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                HoverBorderColor: =
+                HoverColor: =ColorFade(Self.Color,25%)
+                HoverFill: =ColorFade(Self.Color,90%)
+                OnSelect: |-
+                    =
+                    UpdateContext({nome:Blank()});
+                    UpdateContext({idade:Blank()});
+                    UpdateContext({objetivoEducacional:Blank()});
+                    UpdateContext({tempoEstudos:Blank()});
+                    UpdateContext({experiencia:Blank()});
+                    UpdateContext({duracaoEsperada:Blank()});
+                    UpdateContext({disponibilidade:Blank()});
+                    UpdateContext({metodologiaAprendizado:Blank()});
+                    UpdateContext({areaInteresse:Blank()});
+                    UpdateContext({especializacao:Blank()});
+                    
+                    UpdateContext({PopUpConfirmarCadastro:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(Self.Color,70%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =12
+                Text: ="Cancelar"
+                Width: =170
+                X: =552
+                Y: =492
+                ZIndex: =1
+
+            btnConfirmarCadastro As button:
+                BorderColor: =
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(18, 11, 122, 1)
+                FocusedBorderColor: =
+                FocusedBorderThickness: =1
+                Font: =Font.'Segoe UI'
+                HoverBorderColor: =
+                HoverFill: =ColorFade(Self.Fill,8%)
+                OnSelect: =SubmitForm(frmCadastroUsuario)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(Self.Fill,18%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =12
+                Text: ="Confirmar"
+                Width: =170
+                X: =340
+                Y: =492
+                ZIndex: =2
+
+            lblInicio_1 As Texto:
+                Align: ='TextCanvas.Align'.Center
+                AutoHeight: =false
+                DisplayMode: =DisplayMode.Edit
+                Font: =Font.'Segoe UI'
+                FontColor: =RGBA(0, 0, 0, 1)
+                FontItalic: =false
+                FontUnderline: =false
+                Height: =70
+                Size: =40
+                Text: ="Confirmar Cadastro"
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =1065
+                X: =0
+                Y: =62
+                ZIndex: =3
+
+            lblInicio_2 As Texto:
+                Align: ='TextCanvas.Align'.Center
+                AutoHeight: =false
+                DisplayMode: =DisplayMode.Edit
+                Font: =Font.'Segoe UI'
+                FontColor: =RGBA(0, 0, 0, 1)
+                FontItalic: =false
+                FontUnderline: =false
+                Height: =117
+                Size: =20
+                Text: ="Concorda no envio dos seus dados para uma sugestão de trilha de conhecimento?"
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Regular
+                Width: =510
+                X: =277
+                Y: =337
+                ZIndex: =4
+
