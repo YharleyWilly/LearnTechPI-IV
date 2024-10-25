@@ -1,0 +1,67 @@
+{
+  "785d9cbb-aece-4b86-ab70-30e5098ba276": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://edufaesa.sharepoint.com/sites/Aplicaesgeis": {
+        "dataSources": {
+          "lst_Usuarios_LearnTech": {
+            "tableName": "b8a4da24-a3f4-42f9-ad6b-c939256ee941"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "lst_Usuarios_LearnTech"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "785d9cbb-aece-4b86-ab70-30e5098ba276"
+  },
+  "b53fa294-28ff-4b7c-aa60-b0bdb5fac9f5": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Fluxos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1719/1.0.1719.3955/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "[Fluxo] Gpt-3Openai"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "735537e3-a336-4d5e-8f82-214bbdc3ddad"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "[Fluxo] Gpt-3Openai"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "735537e3-a336-4d5e-8f82-214bbdc3ddad"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "[Fluxo]Gpt-3Openai"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "b53fa294-28ff-4b7c-aa60-b0bdb5fac9f5"
+  }
+}
