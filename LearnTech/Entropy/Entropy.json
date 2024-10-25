@@ -93,11 +93,12 @@
     "Tela Cadastro": 12,
     "Tela Home": 4,
     "Tela Resultado": 84,
-    "Tempo_Estudos_DataCard1": 61
+    "Tempo_Estudos_DataCard1": 61,
+    "testeeeee": 94
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/25/2024 01:27:54",
+  "HeaderLastSavedDateTimeUTC": "10/25/2024 01:34:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "785d9cbb-aece-4b86-ab70-30e5098ba276": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/0bd1872ce0b7421cb09d58d8578d8120\"",
@@ -223,7 +224,8 @@
     "Tela Cadastro": {},
     "Tela Home": {},
     "Tela Resultado": {},
-    "Tempo_Estudos_DataCard1": {}
+    "Tempo_Estudos_DataCard1": {},
+    "testeeeee": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {
@@ -1062,7 +1064,8 @@
     "Tela Cadastro": 0,
     "Tela Home": 0,
     "Tela Resultado": 0,
-    "Tempo_Estudos_DataCard1": 55
+    "Tempo_Estudos_DataCard1": 55,
+    "testeeeee": 0
   },
   "ResourcesJsonIndices": {
     "Image-img-background2": 0
