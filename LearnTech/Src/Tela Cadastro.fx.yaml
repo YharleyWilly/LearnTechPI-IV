@@ -179,6 +179,8 @@
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: =lst_Usuarios_LearnTech
                 Height: =463
+                OnFailure: =
+                OnReset: =
                 OnSuccess: |-
                     =Set(gblOutputOpenai,'[Fluxo]Gpt-3Openai'.Run(locNome,locIdade,locObjetivoEducacional,locAreaInteresse,locTempoEstudos,locDuracaoEsperada,locExperiencia,locDisponibilidade,locMetodologiaAprendizado,locEspecializacao));
                     
@@ -195,6 +197,8 @@
                     UpdateContext({especializacao:Blank()});
                     
                     UpdateContext({PopUpConfirmarCadastro:false});
+                    
+                    UpdateContext({locConteinerTeste:false});
                     
                     Navigate('Tela Resultado',ScreenTransition.Fade)
                 UseFluentV9Cards: =true

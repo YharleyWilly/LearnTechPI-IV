@@ -97,7 +97,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/15/2024 22:02:54",
+  "HeaderLastSavedDateTimeUTC": "11/15/2024 22:25:23",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "785d9cbb-aece-4b86-ab70-30e5098ba276": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/0bd1872ce0b7421cb09d58d8578d8120\"",
@@ -1074,7 +1074,7 @@
     "ControlCount": {
       "button": 8,
       "form": 1,
-      "groupContainer": 10,
+      "groupContainer": 11,
       "htmlViewer": 1,
       "icon": 3,
       "PowerApps_CoreControls_ComboboxCanvas": 7,

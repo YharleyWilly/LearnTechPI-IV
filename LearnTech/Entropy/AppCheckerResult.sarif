@@ -188,6 +188,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Tela Cadastro'.locConteinerTeste"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Tela Cadastro'.locConteinerTeste",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "locConteinerTeste",
+                "module": "Tela Cadastro",
+                "type": "'Tela Cadastro'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 1
         }
       ],
       "tool": {
