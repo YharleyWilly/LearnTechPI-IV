@@ -199,7 +199,7 @@
                     
                     UpdateContext({PopUpConfirmarCadastro:false});
                     
-                    UpdateContext({locConteinerTeste:false});
+                    UpdateContext({locPopUpCarregamento:false});
                     
                     Navigate('Tela Resultado',ScreenTransition.Fade)
                 UseFluentV9Cards: =true
@@ -1008,7 +1008,10 @@
                 Height: =35
                 HoverBorderColor: =
                 HoverFill: =ColorFade(Self.Fill,8%)
-                OnSelect: =SubmitForm(frmCadastroUsuario)
+                OnSelect: |-
+                    =SubmitForm(frmCadastroUsuario);
+                    
+                    UpdateContext({locPopUpCarregamento:true})
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
