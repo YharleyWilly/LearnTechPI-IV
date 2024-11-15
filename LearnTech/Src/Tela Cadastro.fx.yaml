@@ -241,6 +241,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Area_Interesse)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -339,6 +340,7 @@
                                 ["Desenvolvimento de Realidade Virtual", "Desenvolvimento de Realidade Aumentada", "Simulação 3D"]
                             )
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -542,6 +544,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Objetivo_Educacional)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -609,6 +612,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Disponibilidade_Investimento)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Visible: =false
                         Width: =Parent.Width - 48
@@ -686,6 +690,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Experiencia)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -751,6 +756,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Tempo_Estudos)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -881,6 +887,7 @@
                         Items: =Choices([@lst_Usuarios_LearnTech].Metodologia_Aprendizado)
                         Required: =false
                         SelectMultiple: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24

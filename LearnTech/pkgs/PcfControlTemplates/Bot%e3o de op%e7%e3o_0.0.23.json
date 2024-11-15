@@ -1067,7 +1067,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.22\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.23\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
@@ -1425,5 +1425,5 @@
     "autoDisabledViewState": "true",
     "supportResettableProperties": "true"
   },
-  "Version": "0.0.22"
+  "Version": "0.0.23"
 }
