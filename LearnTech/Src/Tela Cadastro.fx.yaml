@@ -1078,9 +1078,8 @@
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Visible: |-
-            =//locPopUpCarregamento // variavel de controle, fica visível ao confirmar o envio de dados do usuário pelo formulário de cadastro
-            false
+        Visible: |
+            =locPopUpCarregamento // variavel de controle, fica visível ao confirmar o envio de dados do usuário pelo formulário de cadastro
         Width: =1233
         X: =237
         Y: =106

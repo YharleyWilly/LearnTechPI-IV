@@ -188,36 +188,6 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Tela Cadastro'.locPopUpCarregamento"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Tela Cadastro'.locPopUpCarregamento",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "locPopUpCarregamento",
-                "module": "Tela Cadastro",
-                "type": "'Tela Cadastro'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 1
         }
       ],
       "tool": {
