@@ -7,6 +7,7 @@
     "btnCadastrarUsuario": 66,
     "btnCadastrarUsuario_1": 84,
     "btnCancelarCadastro": 71,
+    "btnCancelarCadastro_1": 105,
     "btnComeceAgora": 82,
     "btnComeceAgora_2": 85,
     "btnComeceAgora_3": 86,
@@ -97,7 +98,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/16/2024 19:45:32",
+  "HeaderLastSavedDateTimeUTC": "11/16/2024 19:59:43",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "565e912a-e446-4468-a65d-6fdb48567f0c": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/735537E3A3364D5E8F82214BBDC3DDAD-A0A6CEC13C7E0739\"",
@@ -140,6 +141,7 @@
     "btnCadastrarUsuario": {},
     "btnCadastrarUsuario_1": {},
     "btnCancelarCadastro": {},
+    "btnCancelarCadastro_1": {},
     "btnComeceAgora": {},
     "btnComeceAgora_2": {},
     "btnComeceAgora_3": {},
@@ -979,6 +981,7 @@
     "btnCadastrarUsuario": 65,
     "btnCadastrarUsuario_1": 83,
     "btnCancelarCadastro": 70,
+    "btnCancelarCadastro_1": 70,
     "btnComeceAgora": 6,
     "btnComeceAgora_2": 84,
     "btnComeceAgora_3": 85,
@@ -1077,7 +1080,7 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 0.6237682,
     "ControlCount": {
-      "button": 8,
+      "button": 10,
       "form": 1,
       "groupContainer": 13,
       "htmlViewer": 1,

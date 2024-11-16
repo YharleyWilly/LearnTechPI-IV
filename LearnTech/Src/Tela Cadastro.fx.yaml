@@ -176,8 +176,8 @@
                 Size: =12
                 Text: ="Cadastrar"
                 Width: =170
-                X: =345
-                Y: =534
+                X: =448
+                Y: =551
                 ZIndex: =1
 
             frmCadastroUsuario As form.PowerApps_CoreControls_Form:
@@ -944,6 +944,53 @@
                 X: =211
                 Y: =16
                 ZIndex: =3
+
+            btnCancelarCadastro_1 As button:
+                BorderColor: =RGBA(18, 11, 122, 1)
+                BorderThickness: =1
+                Color: =RGBA(18, 11, 122, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                HoverBorderColor: =
+                HoverColor: =ColorFade(Self.Color,25%)
+                HoverFill: =ColorFade(Self.Color,90%)
+                OnSelect: |
+                    =// fecha o pop up de confirmação de cadastro e exibe novamente o form de cadastro
+                    
+                    UpdateContext({nome:Blank()});
+                    UpdateContext({idade:Blank()});
+                    UpdateContext({objetivoEducacional:Blank()});
+                    UpdateContext({tempoEstudos:Blank()});
+                    UpdateContext({experiencia:Blank()});
+                    UpdateContext({duracaoEsperada:Blank()});
+                    UpdateContext({disponibilidade:Blank()});
+                    UpdateContext({metodologiaAprendizado:Blank()});
+                    UpdateContext({areaInteresse:Blank()});
+                    UpdateContext({especializacao:Blank()});
+                    
+                    UpdateContext({PopUpConfirmarCadastro:false});
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(Self.Color,70%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =12
+                Text: ="Voltar"
+                Width: =170
+                X: =242
+                Y: =551
+                ZIndex: =4
 
         ctnConfirmarCadastro As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
