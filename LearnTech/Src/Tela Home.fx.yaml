@@ -5,7 +5,6 @@
     Width: =1666
 
     ctnBody As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
         Height: =658
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -84,7 +83,7 @@
             ZIndex: =3
 
     ctnHeader As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        BorderColor: =RGBA(0, 0, 0, 0)
         Height: =110
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
