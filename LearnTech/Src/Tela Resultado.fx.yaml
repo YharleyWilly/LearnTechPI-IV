@@ -110,7 +110,7 @@
         HtmlText1 As htmlViewer:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             Font: =App.Theme.Font
-            Height: =478
+            Height: =521
             HtmlText: =gblOutputOpenai.output // exibe o retorno da API da IA com as informações do guia de conhecimento
             Size: =13
             Width: =859
