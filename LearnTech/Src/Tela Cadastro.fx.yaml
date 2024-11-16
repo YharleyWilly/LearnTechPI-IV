@@ -1064,39 +1064,3 @@
                 Y: =67
                 ZIndex: =4
 
-    ctnCarregamento As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =615
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =locPopUpCarregamento
-        Width: =1233
-        X: =217
-        Y: =110
-        ZIndex: =4
-
-        lblSolicitacaoSendoAtualizadaTelaSolicitacoes As Texto:
-            DisplayMode: =DisplayMode.Edit
-            Font: =Font.'Segoe UI'
-            Height: =60
-            Size: =40
-            Text: ="O seu guia de conhecimento está sendo processado..."
-            Weight: ='TextCanvas.Weight'.Semibold
-            Width: =982
-            X: =126
-            Y: =68
-            ZIndex: =1
-
-        imgLoadingSubmitTelaSolicitacoes As image:
-            BorderColor: =App.Theme.Colors.Darker40
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Image: |-
-                ="data:image/svg+xml;utf8,"& EncodeUrl("<svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><style>.spinner_9y7u{animation:spinner_fUkk 2.4s linear infinite;animation-delay:-2.4s; fill: blue}.spinner_DF2s{animation-delay:-1.6s; fill: blue}.spinner_q27e{animation-delay:-.8s; fill: blue}@keyframes spinner_fUkk{8.33%{x:13px;y:1px}25%{x:13px;y:1px}33.3%{x:13px;y:13px}50%{x:13px;y:13px}58.33%{x:1px;y:13px}75%{x:1px;y:13px}83.33%{x:1px;y:1px}}</style><rect class='spinner_9y7u' x='1' y='1' rx='1' width='10' height='10'/><rect class='spinner_9y7u spinner_DF2s' x='1' y='1' rx='1' width='10' height='10'/><rect class='spinner_9y7u spinner_q27e' x='1' y='1' rx='1' width='10' height='10'/></svg>") 
-            X: =567
-            Y: =245
-            ZIndex: =2
-
