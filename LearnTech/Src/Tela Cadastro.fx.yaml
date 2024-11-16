@@ -6,7 +6,7 @@
     Width: =1666
 
     ctnHeader_1 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        BorderColor: =RGBA(0, 0, 0, 0)
         Height: =110
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -45,6 +45,7 @@
             ZIndex: =2
 
     ctnBody_1 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         Height: =658
         RadiusBottomLeft: =4
@@ -93,7 +94,7 @@
             ZIndex: =4
 
     ctnPopUp As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        BorderColor: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(106, 122, 127, 0.25)
         Height: =768
         RadiusBottomLeft: =4
@@ -104,6 +105,7 @@
         ZIndex: =3
 
         ctnFrmCadastroUsuario As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(0, 0, 0, 0)
             DropShadow: =DropShadow.Regular
             Fill: =RGBA(255, 255, 255, 1)
             Height: =614
@@ -958,6 +960,7 @@
                 ZIndex: =4
 
         ctnConfirmarCadastro As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Regular
             Fill: =RGBA(255, 255, 255, 1)
             Height: =223
             RadiusBottomLeft: =15
