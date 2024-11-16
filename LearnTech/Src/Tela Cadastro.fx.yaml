@@ -130,7 +130,8 @@
                 HoverBorderColor: =
                 HoverFill: =ColorFade(Self.Fill,8%)
                 OnSelect: |-
-                    =If(
+                    =// verifica se algum campo está vazio
+                    If(
                         DataCardValue2.Value = Blank() ||
                         DataCardValue3.Value = Blank() ||
                         DataCardValue4.Selected.Value = Blank() ||
@@ -142,9 +143,12 @@
                         DataCardValue1.Selected.Value = Blank() ||
                         DataCardValue5.Selected.Value = Blank() 
                         ,
+                        
+                        // caso algum campo esteja vazio exibe a notificação ao usuário
                         Notify("É necessário preencher todos os campos para seguir com o guia!",NotificationType.Information,3000)
                         ,
                     
+                        // caso os campos estejam preenchidos é criado as variáveis de contexto com a informação de cada campo
                         UpdateContext({locNome:DataCardValue2.Value});
                         UpdateContext({locIdade:DataCardValue3.Value});
                         UpdateContext({locObjetivoEducacional:DataCardValue4.Selected.Value});
@@ -156,6 +160,7 @@
                         UpdateContext({locAreaInteresse:DataCardValue1.Selected.Value});
                         UpdateContext({locEspecializacao:DataCardValue5.Selected.Value});
                     
+                    // o pop up para confirmar o cadastro é exibido assim que as variáveis de contexto são definidas
                     UpdateContext({PopUpConfirmarCadastro:true}))
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -181,7 +186,7 @@
                 DataSource: =lst_Usuarios_LearnTech
                 Height: =463
                 OnFailure: |-
-                    =UpdateContext({locPopUpCarregamento:false})
+                    =UpdateContext({locPopUpCarregamento:false}) //formulário cadastro usuário
                 OnReset: =
                 OnSuccess: |-
                     =Set(gblOutputOpenai,'[Fluxo]Gpt-3Openai'.Run(locNome,locIdade,locObjetivoEducacional,locAreaInteresse,locTempoEstudos,locDuracaoEsperada,locExperiencia,locDisponibilidade,locMetodologiaAprendizado,locEspecializacao));
@@ -932,7 +937,7 @@
                 FontUnderline: =false
                 Height: =52
                 Size: =30
-                Text: ="Insira suas informações"
+                Text: ="Insira suas informações" // titulo formulario de cadastro usuário
                 Visible: =true
                 Weight: ='TextCanvas.Weight'.Semibold
                 Width: =438
@@ -969,7 +974,8 @@
                 HoverColor: =ColorFade(Self.Color,25%)
                 HoverFill: =ColorFade(Self.Color,90%)
                 OnSelect: |
-                    =
+                    =// fecha o pop up de confirmação de cadastro e exibe novamente o form de cadastro
+                    
                     UpdateContext({nome:Blank()});
                     UpdateContext({idade:Blank()});
                     UpdateContext({objetivoEducacional:Blank()});
@@ -1010,9 +1016,9 @@
                 HoverBorderColor: =
                 HoverFill: =ColorFade(Self.Fill,8%)
                 OnSelect: |-
-                    =SubmitForm(frmCadastroUsuario);
+                    =SubmitForm(frmCadastroUsuario); // envia os dados do usuário para uma lista do sharepoint
                     
-                    UpdateContext({locPopUpCarregamento:true})
+                    UpdateContext({locPopUpCarregamento:true}) // deixa o pop up de carregamento visível 
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
@@ -1037,7 +1043,7 @@
                 FontUnderline: =false
                 Height: =34
                 Size: =22
-                Text: ="Confirmar Cadastro"
+                Text: ="Confirmar Cadastro" // titulo confirmação envio dados usuário
                 VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Visible: =true
                 Weight: ='TextCanvas.Weight'.Semibold
@@ -1056,7 +1062,7 @@
                 FontUnderline: =false
                 Height: =43
                 Size: =12
-                Text: ="Concorda no envio dos seus dados para uma sugestão de trilha de conhecimento?"
+                Text: ="Concorda no envio dos seus dados para uma sugestão de trilha de conhecimento?" // subtitulo pop up confirmação envio dados usuário
                 Visible: =true
                 Weight: ='TextCanvas.Weight'.Regular
                 Width: =344
@@ -1073,8 +1079,8 @@
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Visible: |-
-            =//locPopUpCarregamento
-            true
+            =//locPopUpCarregamento // variavel de controle, fica visível ao confirmar o envio de dados do usuário pelo formulário de cadastro
+            false
         Width: =1233
         X: =237
         Y: =106
@@ -1085,7 +1091,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =250
-            Image: =ai
+            Image: =ai // gif pop up tela de carregamento
             Width: =250
             X: =492
             Y: =215
@@ -1096,7 +1102,7 @@
             Font: =Font.'Segoe UI'
             Height: =60
             Size: =40
-            Text: ="O seu guia de conhecimento está sendo processado..."
+            Text: ="O seu guia de conhecimento está sendo processado..." // titulo pop up carregamento
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =982
             X: =126
