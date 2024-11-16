@@ -86,7 +86,7 @@
             Text: ="Repetir"
             Width: =170
             X: =748
-            Y: =598
+            Y: =616
             ZIndex: =7
 
         lblTituloResultado As Texto:
@@ -110,7 +110,7 @@
         HtmlText1 As htmlViewer:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             Font: =App.Theme.Font
-            Height: =521
+            Height: =543
             HtmlText: =gblOutputOpenai.output // exibe o retorno da API da IA com as informações do guia de conhecimento
             Size: =13
             Width: =859
