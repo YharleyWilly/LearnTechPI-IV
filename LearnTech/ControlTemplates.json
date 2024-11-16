@@ -26,7 +26,7 @@
     "Name": "PowerApps_CoreControls_RadioGroupCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Botão de opção",
-    "Version": "0.0.22"
+    "Version": "0.0.23"
   },
   "button": {
     "CustomGroupControlTemplateName": "",
@@ -55,7 +55,7 @@
     "Name": "PowerApps_CoreControls_ComboboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Caixa de Combinação",
-    "Version": "0.0.45"
+    "Version": "0.0.47"
   },
   "Entrada de texto": {
     "CustomGroupControlTemplateName": "",
@@ -70,7 +70,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Entrada de texto",
-    "Version": "0.0.48"
+    "Version": "0.0.49"
   },
   "form": {
     "CustomGroupControlTemplateName": "",
@@ -170,7 +170,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Texto",
-    "Version": "0.0.42"
+    "Version": "0.0.43"
   },
   "typedDataCard": {
     "CustomGroupControlTemplateName": "",

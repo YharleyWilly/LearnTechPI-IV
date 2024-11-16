@@ -111,8 +111,9 @@
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
+            Visible: =!PopUpConfirmarCadastro
             Width: =859
-            X: =432
+            X: =404
             Y: =108
             ZIndex: =3
 
@@ -179,6 +180,9 @@
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: =lst_Usuarios_LearnTech
                 Height: =463
+                OnFailure: |-
+                    =UpdateContext({locPopUpCarregamento:false})
+                OnReset: =
                 OnSuccess: |-
                     =Set(gblOutputOpenai,'[Fluxo]Gpt-3Openai'.Run(locNome,locIdade,locObjetivoEducacional,locAreaInteresse,locTempoEstudos,locDuracaoEsperada,locExperiencia,locDisponibilidade,locMetodologiaAprendizado,locEspecializacao));
                     
@@ -195,6 +199,8 @@
                     UpdateContext({especializacao:Blank()});
                     
                     UpdateContext({PopUpConfirmarCadastro:false});
+                    
+                    UpdateContext({locPopUpCarregamento:false});
                     
                     Navigate('Tela Resultado',ScreenTransition.Fade)
                 UseFluentV9Cards: =true
@@ -241,6 +247,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Area_Interesse)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -339,6 +346,7 @@
                                 ["Desenvolvimento de Realidade Virtual", "Desenvolvimento de Realidade Aumentada", "Simulação 3D"]
                             )
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -542,6 +550,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Objetivo_Educacional)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -609,6 +618,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Disponibilidade_Investimento)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Visible: =false
                         Width: =Parent.Width - 48
@@ -686,6 +696,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Experiencia)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -751,6 +762,7 @@
                         Height: =32
                         Items: =Choices([@lst_Usuarios_LearnTech].Tempo_Estudos)
                         Required: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -881,6 +893,7 @@
                         Items: =Choices([@lst_Usuarios_LearnTech].Metodologia_Aprendizado)
                         Required: =false
                         SelectMultiple: =false
+                        TriggerOutput: ="Keypress"
                         ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                         Width: =Parent.Width - 48
                         X: =24
@@ -929,15 +942,15 @@
 
         ctnConfirmarCadastro As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =614
+            Height: =223
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Visible: =PopUpConfirmarCadastro
-            Width: =1065
-            X: =301
-            Y: =108
+            Width: =403
+            X: =632
+            Y: =273
             ZIndex: =4
 
             btnCancelarCadastro As button:
@@ -951,10 +964,11 @@
                 FocusedBorderColor: =
                 FocusedBorderThickness: =2
                 Font: =Font.'Segoe UI'
+                Height: =35
                 HoverBorderColor: =
                 HoverColor: =ColorFade(Self.Color,25%)
                 HoverFill: =ColorFade(Self.Color,90%)
-                OnSelect: |-
+                OnSelect: |
                     =
                     UpdateContext({nome:Blank()});
                     UpdateContext({idade:Blank()});
@@ -967,7 +981,7 @@
                     UpdateContext({areaInteresse:Blank()});
                     UpdateContext({especializacao:Blank()});
                     
-                    UpdateContext({PopUpConfirmarCadastro:false})
+                    UpdateContext({PopUpConfirmarCadastro:false});
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
@@ -975,15 +989,11 @@
                 PressedBorderColor: =
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(Self.Color,70%)
-                RadiusBottomLeft: =20
-                RadiusBottomRight: =20
-                RadiusTopLeft: =20
-                RadiusTopRight: =20
-                Size: =12
+                Size: =10
                 Text: ="Cancelar"
                 Width: =170
-                X: =552
-                Y: =492
+                X: =201
+                Y: =159
                 ZIndex: =1
 
             btnConfirmarCadastro As button:
@@ -996,9 +1006,13 @@
                 FocusedBorderColor: =
                 FocusedBorderThickness: =1
                 Font: =Font.'Segoe UI'
+                Height: =35
                 HoverBorderColor: =
                 HoverFill: =ColorFade(Self.Fill,8%)
-                OnSelect: =SubmitForm(frmCadastroUsuario)
+                OnSelect: |-
+                    =SubmitForm(frmCadastroUsuario);
+                    
+                    UpdateContext({locPopUpCarregamento:true})
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
@@ -1006,50 +1020,47 @@
                 PressedBorderColor: =
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(Self.Fill,18%)
-                RadiusBottomLeft: =20
-                RadiusBottomRight: =20
-                RadiusTopLeft: =20
-                RadiusTopRight: =20
-                Size: =12
+                Size: =10
                 Text: ="Confirmar"
                 Width: =170
-                X: =340
-                Y: =492
+                X: =27
+                Y: =159
                 ZIndex: =2
 
             lblInicio_1 As Texto:
-                Align: ='TextCanvas.Align'.Center
+                Align: ='TextCanvas.Align'.Start
                 AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Font: =Font.'Segoe UI'
                 FontColor: =RGBA(0, 0, 0, 1)
                 FontItalic: =false
                 FontUnderline: =false
-                Height: =70
-                Size: =40
+                Height: =34
+                Size: =22
                 Text: ="Confirmar Cadastro"
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Visible: =true
                 Weight: ='TextCanvas.Weight'.Semibold
-                Width: =1065
-                X: =0
-                Y: =62
+                Width: =344
+                X: =27
+                Y: =32
                 ZIndex: =3
 
             lblInicio_2 As Texto:
-                Align: ='TextCanvas.Align'.Center
+                Align: ='TextCanvas.Align'.Start
                 AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Font: =Font.'Segoe UI'
-                FontColor: =RGBA(0, 0, 0, 1)
+                FontColor: =RGBA(181, 181, 181, 1)
                 FontItalic: =false
                 FontUnderline: =false
-                Height: =117
-                Size: =20
+                Height: =43
+                Size: =12
                 Text: ="Concorda no envio dos seus dados para uma sugestão de trilha de conhecimento?"
                 Visible: =true
                 Weight: ='TextCanvas.Weight'.Regular
-                Width: =510
-                X: =277
-                Y: =337
+                Width: =344
+                X: =27
+                Y: =67
                 ZIndex: =4
 
