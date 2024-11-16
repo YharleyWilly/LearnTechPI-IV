@@ -1071,6 +1071,7 @@
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
+        Visible: =locPopUpCarregamento
         Width: =1233
         X: =217
         Y: =110
