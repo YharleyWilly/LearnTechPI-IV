@@ -45,7 +45,7 @@
             ZIndex: =2
 
     ctnBody_1 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        BorderStyle: =BorderStyle.None
         Height: =658
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
