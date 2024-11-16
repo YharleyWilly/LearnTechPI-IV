@@ -947,14 +947,13 @@
 
             Icon1 As icon.BackArrow:
                 BorderColor: =App.Theme.Colors.Darker40
-                Color: =
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =35
+                Height: =32
                 Icon: =Icon.BackArrow
-                Width: =35
-                X: =40
-                Y: =27
+                Width: =32
+                X: =38
+                Y: =28
                 ZIndex: =4
 
         ctnConfirmarCadastro As groupContainer.manualLayoutContainer:
