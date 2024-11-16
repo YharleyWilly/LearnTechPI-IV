@@ -951,6 +951,7 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =32
                 Icon: =Icon.BackArrow
+                OnSelect: =Navigate('Tela Home', ScreenTransition.Fade)
                 Width: =32
                 X: =38
                 Y: =28
