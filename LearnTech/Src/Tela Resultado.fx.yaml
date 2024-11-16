@@ -5,27 +5,15 @@
     Width: =1666
 
     ctnHeader_2 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =110
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Height: =90
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =1666
         ZIndex: =1
-
-        icoMenu_2 As icon.Waffle:
-            BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =50
-            Icon: =Icon.Waffle
-            Visible: =false
-            Width: =50
-            X: =1560
-            Y: =30
-            ZIndex: =1
 
         lblNomeApp_2 As Texto:
             AutoHeight: =false
@@ -36,7 +24,7 @@
             FontUnderline: =false
             Height: =40
             Size: =25
-            Text: ="Learn Tech"
+            Text: ="Learn Tech" // titulo app
             Weight: ='TextCanvas.Weight'.Regular
             Width: =160
             X: =82
@@ -44,14 +32,15 @@
             ZIndex: =2
 
     ctnBody_2 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =658
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Height: =678
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =1666
-        Y: =110
+        Y: =90
         ZIndex: =2
 
         ctnResultado As groupContainer.manualLayoutContainer:
@@ -62,61 +51,10 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
+            Visible: =false
             Width: =986
             X: =340
             ZIndex: =6
-
-            lblResultado As Texto:
-                Align: ='TextCanvas.Align'.Start
-                AutoHeight: =false
-                DisplayMode: =DisplayMode.Edit
-                Font: =Font.'Segoe UI'
-                FontColor: =RGBA(0, 0, 0, 1)
-                FontItalic: =false
-                FontUnderline: =false
-                Height: =411
-                PaddingBottom: =20
-                PaddingLeft: =20
-                PaddingRight: =20
-                PaddingTop: =20
-                Size: =20
-                Text: =gblOutputOpenai.output
-                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
-                Visible: =false
-                Weight: ='TextCanvas.Weight'.Semibold
-                Width: =1314
-                X: =0
-                Y: =101
-                ZIndex: =1
-
-            lblTituloResultado As Texto:
-                Align: ='TextCanvas.Align'.Center
-                AutoHeight: =false
-                DisplayMode: =DisplayMode.Edit
-                Font: =Font.'Segoe UI'
-                FontColor: =RGBA(0, 0, 0, 1)
-                FontItalic: =false
-                FontUnderline: =false
-                Height: =80
-                Size: =40
-                Text: ="Resultado"
-                Visible: =true
-                Weight: ='TextCanvas.Weight'.Semibold
-                Width: =986
-                X: =0
-                Y: =21
-                ZIndex: =2
-
-            HtmlText1 As htmlViewer:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
-                Height: =478
-                HtmlText: =gblOutputOpenai.output
-                Size: =13
-                Width: =859
-                X: =63
-                Y: =101
-                ZIndex: =3
 
         btnRepetir As button:
             BorderColor: =
@@ -132,7 +70,7 @@
             HoverBorderColor: =
             HoverColor: =ColorFade(Self.Color,25%)
             HoverFill: =ColorFade(Self.Color,90%)
-            OnSelect: =Navigate('Tela Home',ScreenTransition.Fade)
+            OnSelect: =Navigate('Tela Home',ScreenTransition.Fade) // navega para a tela de inicio
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -148,6 +86,35 @@
             Text: ="Repetir"
             Width: =170
             X: =748
-            Y: =598
+            Y: =616
             ZIndex: =7
+
+        lblTituloResultado As Texto:
+            Align: ='TextCanvas.Align'.Center
+            AutoHeight: =false
+            DisplayMode: =DisplayMode.Edit
+            Font: =Font.'Segoe UI'
+            FontColor: =RGBA(255, 255, 255, 1)
+            FontItalic: =false
+            FontUnderline: =false
+            Height: =58
+            Size: =36
+            Text: ="Resultado" // titulo resultado guia de conhecimento
+            Visible: =true
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =986
+            X: =339
+            Y: =0
+            ZIndex: =8
+
+        HtmlText1 As htmlViewer:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            Height: =543
+            HtmlText: =gblOutputOpenai.output // exibe o retorno da API da IA com as informações do guia de conhecimento
+            Size: =13
+            Width: =859
+            X: =403
+            Y: =58
+            ZIndex: =9
 

@@ -5,7 +5,6 @@
     Width: =1666
 
     ctnBody As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
         Height: =658
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -25,7 +24,7 @@
             FontUnderline: =false
             Height: =51
             Size: =16
-            Text: ="Comece agora mesmo a guiar o seu conhecimento para um futuro dev"
+            Text: ="Comece agora mesmo a guiar o seu conhecimento para um futuro dev" // sub titulo corpo 
             Weight: ='TextCanvas.Weight'.Regular
             Width: =1039
             X: =314
@@ -42,7 +41,7 @@
             FontUnderline: =false
             Height: =160
             Size: =50
-            Text: ="Guia inteligente para se tornar um mestre na área da tecnologia!"
+            Text: ="Guia inteligente para se tornar um mestre na área da tecnologia!" // titulo corpo 
             VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
             Weight: ='TextCanvas.Weight'.Medium
             Width: =1039
@@ -64,7 +63,7 @@
             HoverBorderColor: =
             HoverColor: =ColorFade(Self.Color,25%)
             HoverFill: =ColorFade(Self.Color,90%)
-            OnSelect: =Navigate('Tela Cadastro', ScreenTransition.Fade)
+            OnSelect: =Navigate('Tela Cadastro', ScreenTransition.Fade) //botao comece agora
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -84,7 +83,7 @@
             ZIndex: =3
 
     ctnHeader As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
+        BorderColor: =RGBA(0, 0, 0, 0)
         Height: =110
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -92,19 +91,6 @@
         RadiusTopRight: =4
         Width: =1666
         ZIndex: =2
-
-        icoMenu As icon.Waffle:
-            BorderColor: =App.Theme.Colors.Darker40
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =50
-            Icon: =Icon.Waffle
-            Visible: =false
-            Width: =50
-            X: =1560
-            Y: =30
-            ZIndex: =1
 
         lblNomeApp As Texto:
             AutoHeight: =false
@@ -115,7 +101,7 @@
             FontUnderline: =false
             Height: =40
             Size: =25
-            Text: ="Learn Tech"
+            Text: ="Learn Tech" // titulo app
             Weight: ='TextCanvas.Weight'.Regular
             Width: =160
             X: =82
