@@ -7,7 +7,7 @@
     ctnHeader_2 As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        Height: =110
+        Height: =90
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -34,13 +34,13 @@
     ctnBody_2 As groupContainer.manualLayoutContainer:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        Height: =658
+        Height: =678
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =1666
-        Y: =110
+        Y: =90
         ZIndex: =2
 
         ctnResultado As groupContainer.manualLayoutContainer:
@@ -98,12 +98,12 @@
             FontItalic: =false
             FontUnderline: =false
             Height: =58
-            Size: =40
+            Size: =36
             Text: ="Resultado" // titulo resultado guia de conhecimento
             Visible: =true
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =986
-            X: =340
+            X: =339
             Y: =0
             ZIndex: =8
 
