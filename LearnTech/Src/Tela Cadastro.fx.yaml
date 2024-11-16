@@ -1066,7 +1066,7 @@
     ctnCarregamento As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =574
+        Height: =615
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
