@@ -34,8 +34,8 @@ design As screen:
         Size: =12
         Text: ="Comece agora!"
         Width: =170
-        X: =1245
-        Y: =696
+        X: =1408
+        Y: =690
         ZIndex: =1
 
     btnComeceAgora_3 As button:
@@ -66,8 +66,8 @@ design As screen:
         Size: =12
         Text: ="Login"
         Width: =170
-        X: =1435
-        Y: =696
+        X: =1408
+        Y: =552
         ZIndex: =2
 
     btnCadastrarUsuario_1 As button:
@@ -97,7 +97,7 @@ design As screen:
         Size: =12
         Text: ="Cadastrar"
         Width: =170
-        X: =1276
-        Y: =616
+        X: =1408
+        Y: =624
         ZIndex: =3
 
