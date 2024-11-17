@@ -6,9 +6,9 @@ Repositório para solução desenvolvida na Power Platform para o trabalho de Pr
 
 # Learn Tech
 
-*Learn Tech* é um projeto criado para fornecer um guia interativo para aspirantes a desenvolvedores. 
+Learn Tech é um projeto criado para fornecer um guia interativo para aspirantes a desenvolvedores. 
 
-Solução desenvolvida utilizando a Power Platform, integrando Power Apps e Power Automate. O Power Apps foi utilizado para criar a interface do aplicativo e capturar as entradas do usuário de forma interativa e amigável. As informações coletadas são enviadas para o Power Automate, que processa os dados e os encaminha para uma IA do Gemini. Essa inteligência artificial analisa as informações e retorna um guia de estudos personalizado, oferecendo recomendações sob medida para o usuário. Também faz o uso de *HTML* para exibir conteúdo estilizado e orientações sobre as diversas áreas da Tecnologia da Informação. A ideia é oferecer um card interativo e personalizado que ajuda o usuário a começar sua jornada na programação, com dicas, recursos e um plano de aprendizado básico.
+Solução desenvolvida utilizando a Power Platform, integrando Power Apps e Power Automate. O Power Apps foi utilizado para criar a interface do aplicativo e capturar as entradas do usuário de forma interativa e amigável. As informações coletadas são enviadas para o Power Automate, que processa os dados e os encaminha para uma IA do Gemini. Essa inteligência artificial analisa as informações e retorna um guia de estudos personalizado, oferecendo recomendações sob medida para o usuário. Também faz o uso de HTML para exibir conteúdo estilizado e orientações sobre as diversas áreas da Tecnologia da Informação. A ideia é oferecer um card interativo e personalizado que ajuda o usuário a começar sua jornada na programação, com dicas, recursos e um plano de aprendizado básico.
 
 ## Tabela de Conteúdos
 
@@ -22,7 +22,7 @@ Solução desenvolvida utilizando a Power Platform, integrando Power Apps e Powe
 
 ## Visão Geral
 
-O *Learn Tech* é uma aplicação em Power Apps que apresenta um guia interativo para novos desenvolvedores que desejam aprender sobre Tecnologia da Informação. O aplicativo oferece um roadmap básico, com dicas e sugestões de ferramentas e plataformas de aprendizado. A aplicação utiliza um controle HTML para renderizar um layout estilizado, tornando a experiência mais visualmente agradável.
+O Learn Tech é uma aplicação em Power Apps que apresenta um guia interativo para novos desenvolvedores que desejam aprender sobre Tecnologia da Informação. O aplicativo oferece um roadmap básico, com dicas e sugestões de ferramentas e plataformas de aprendizado. A aplicação utiliza um controle HTML para renderizar um layout estilizado, tornando a experiência mais visualmente agradável.
 
 ## Funcionalidades
 
@@ -34,11 +34,11 @@ O *Learn Tech* é uma aplicação em Power Apps que apresenta um guia interativo
 
 ## Tecnologias Utilizadas
 
-- *Power Apps*: Para a construção da interface e lógica do aplicativo.
-- *Power Automate*: Para integração dos dados do aplicativo com a IA que fornece a saída do guia de estudos para o aplicativo.
-- *HTML*: Para formatação e estilo do conteúdo interativo.
-- *CSS Inline*: Para a estilização do card exibido no controle HTML.
-- *GitHub*: Para controle de versão e colaboração no desenvolvimento.
+- Power Apps: Para a construção da interface e lógica do aplicativo.
+- Power Automate: Para integração dos dados do aplicativo com a IA que fornece a saída do guia de estudos para o aplicativo.
+- HTML: Para formatação e estilo do conteúdo interativo.
+- CSS Inline: Para a estilização do card exibido no controle HTML.
+- GitHub: Para controle de versão e colaboração no desenvolvimento.
 
 ## Como Usar
 
@@ -58,3 +58,7 @@ https://apps.powerapps.com/play/e/default-b9976b30-8143-4ac5-a408-f906b4062b85/a
 
 Apresentação do aplicativo no Youtube:
 https://youtu.be/EbsBpUDCveI
+
+Implementação tela de carregamento que impossibilita a ação do usuário enquanto os seus dados são enviados ao Power Automate, integrado a IA e retornado com o guia de conhecimento a tela de resultado.
+
+Grupo: Yharley Willy, Rodrigo Campos, João Guilherme Pigatti, Weverton Gomes e Tiago Morais.
