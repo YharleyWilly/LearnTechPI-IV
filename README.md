@@ -56,8 +56,14 @@ Obs: É necessário ter uma conta do power apps no domínio da Faesa "@aluno.fae
 Link do aplicativo:
 https://apps.powerapps.com/play/e/default-b9976b30-8143-4ac5-a408-f906b4062b85/a/cf8fb5cb-77cb-4c81-90c1-c2c3b141330e?tenantId=b9976b30-8143-4ac5-a408-f906b4062b85&sourcetime=1729821404727
 
-Apresentação do aplicativo no Youtube:
+Link do aplicativo sem a barra cabeçalho do Power Apps:
+https://apps.powerapps.com/play/e/default-b9976b30-8143-4ac5-a408-f906b4062b85/a/cf8fb5cb-77cb-4c81-90c1-c2c3b141330e?tenantId=b9976b30-8143-4ac5-a408-f906b4062b85&sourcetime=1731893951122&source=portal&hidenavbar=true
+
+Apresentação do protótipo:
 https://youtu.be/EbsBpUDCveI
+
+Apresentação entrega final:
+https://youtu.be/gDUu8fxKpYY
 
 Implementação tela de carregamento que impossibilita a ação do usuário enquanto os seus dados são enviados ao Power Automate, integrado a IA e retornado com o guia de conhecimento a tela de resultado.
 
